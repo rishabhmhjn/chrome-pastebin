@@ -78,6 +78,61 @@ PasteBin.config.availableSyntax = {
 
 
 PasteBin.config.syntaxOptions = [{
+    "name": "C",
+    "value": "c"
+}, {
+    "name": "coffeeSCript",
+    "value": "coffeescript"
+}, {
+    "name": "CSS",
+    "value": "css"
+}, {
+    "name": "C++",
+    "value": "cpp"
+}, {
+    "name": "htmL",
+    "VAlue": "html4strict"
+}, {
+    "name": "HTML 5",
+    "value": "html5"
+}, {
+    "name": "java",
+    "value": "java"
+}, {
+    "name": "javaSCripT",
+    "value": "javascript"
+}, {
+    "name": "jqUery",
+    "value": "jquery"
+}, {
+    "name": "MySQL",
+    "value": "mysql"
+}, {
+    "name": "objective C",
+    "value": "objc"
+}, {
+    "name": "PHP",
+    "value": "php"
+}, {
+    "name": "Plain Text",
+    "value": ""
+}, {
+    "name": "PYthon",
+    "value": "python"
+}, {
+    "name": "ruby",
+    "value": "ruby"
+}, {
+    "name": "XML",
+    "value": "xml"
+}, {
+    "name": "YAML",
+    "value": "yaml"
+}, {
+    "name": "----",
+    "value": "dummmy",
+    "disabled": true
+}, {
     "name": "4CS",
     "value": "4cs"
 }, {
@@ -165,9 +220,6 @@ PasteBin.config.syntaxOptions = [{
     "name": "brAinfuck",
     "value": "bf"
 }, {
-    "name": "C",
-    "value": "c"
-}, {
     "name": "C for Macs",
     "value": "c_mac"
 }, {
@@ -176,9 +228,6 @@ PasteBin.config.syntaxOptions = [{
 }, {
     "name": "C#",
     "value": "csharp"
-}, {
-    "name": "C++",
-    "value": "cpp"
 }, {
     "name": "C++ (with QT extensions)",
     "value": "cpp-qt"
@@ -213,14 +262,8 @@ PasteBin.config.syntaxOptions = [{
     "name": "COBOL",
     "value": "cobol"
 }, {
-    "name": "coffeeSCript",
-    "value": "coffeescript"
-}, {
     "name": "coLdfusion",
     "value": "cfm"
-}, {
-    "name": "CSS",
-    "value": "css"
 }, {
     "name": "CueSheet",
     "value": "cuesheet"
@@ -333,12 +376,6 @@ PasteBin.config.syntaxOptions = [{
     "name": "HQ9 PlUs",
     "value": "hq9plus"
 }, {
-    "name": "htmL",
-    "VAlue": "html4strict"
-}, {
-    "name": "HTML 5",
-    "value": "html5"
-}, {
     "name": "icon",
     "value": "icon"
 }, {
@@ -360,17 +397,8 @@ PasteBin.config.syntaxOptions = [{
     "name": "J",
     "value": "j"
 }, {
-    "name": "java",
-    "value": "java"
-}, {
     "name": "Java 5",
     "value": "java5"
-}, {
-    "name": "javaSCripT",
-    "value": "javascript"
-}, {
-    "name": "jqUery",
-    "value": "jquery"
 }, {
     "name": "KiXtArt",
     "value": "kixtart"
@@ -450,9 +478,6 @@ PasteBin.config.syntaxOptions = [{
     "name": "MXML",
     "value": "mxml"
 }, {
-    "name": "MySQL",
-    "value": "mysql"
-}, {
     "name": "NAgios",
     "value": "nagios"
 }, {
@@ -470,9 +495,6 @@ PasteBin.config.syntaxOptions = [{
 }, {
     "name": "OBjeck PRogramming LAngua",
     "value": "objeck"
-}, {
-    "name": "objective C",
-    "value": "objc"
 }, {
     "name": "ocalm BRief",
     "value": "ocaml-brief"
@@ -525,9 +547,6 @@ PasteBin.config.syntaxOptions = [{
     "name": "Perl 6",
     "value": "perl6"
 }, {
-    "name": "PHP",
-    "value": "php"
-}, {
     "name": "pHP BRIeF",
     "value": "php-brief"
 }, {
@@ -576,9 +595,6 @@ PasteBin.config.syntaxOptions = [{
     "name": "PyCon",
     "value": "pycon"
 }, {
-    "name": "PYthon",
-    "value": "python"
-}, {
     "name": "Python for S60",
     "value": "pys60"
 }, {
@@ -608,9 +624,6 @@ PasteBin.config.syntaxOptions = [{
 }, {
     "name": "RPM SpEc",
     "value": "rpmspec"
-}, {
-    "name": "ruby",
-    "value": "ruby"
 }, {
     "name": "RuBy gnUplot",
     "value": "gnuplot"
@@ -717,17 +730,11 @@ PasteBin.config.syntaxOptions = [{
     "name": "XBAsic",
     "value": "xbasic"
 }, {
-    "name": "XML",
-    "value": "xml"
-}, {
     "name": "xorg confIg",
     "value": "xorg_conf"
 }, {
     "name": "XPP",
     "value": "xpp"
-}, {
-    "name": "YAML",
-    "value": "yaml"
 }, {
     "name": "Z80 assembler",
     "value": "z80"
@@ -738,7 +745,7 @@ PasteBin.config.syntaxOptions = [{
 
 
 
-PasteBin.config.pasteExpireDate = [{
+PasteBin.config.pasteExpirePeriod = [{
     "name": "Never",
     "value": "N"
 }, {
@@ -760,3 +767,25 @@ PasteBin.config.pasteExpireDate = [{
     "name": "1 Month",
     "value": "1M"
 }];
+
+
+
+PasteBin.config.pastePrivate = [{
+    "name": "Public",
+    "value": "0"
+}, {
+    "name": "Unlisted",
+    "value": "1"
+}, {
+    "name": "Private",
+    "value": "2"
+}];
+
+
+PasteBin.config.apiKey = "2e58ce27239e34a77c5ef65dbea8b24d";
+PasteBin.config.newPasteUrl = "http://pastebin.com/api/api_post.php";
+
+
+
+
+

@@ -5,7 +5,7 @@ Available on Chrome Web Store - TODO-URL
 Techs
 -----
 - [Yeoman](http://yeoman.io/)
- - [yeoman/generator-chrome-extension](https://github.com/yeoman/generator-chrome-extension)
+  - [yeoman/generator-chrome-extension](https://github.com/yeoman/generator-chrome-extension)
 - [Grunt](http://gruntjs.com/)
 - [Bower](http://bower.io/)
 - [CodeMirror](http://codemirror.net/)
@@ -17,5 +17,8 @@ Techs
 
 TODO
 ====
-- TODO 1
+- Editor options
+  - line wrap
+  - save settings
+
 - TODO 2

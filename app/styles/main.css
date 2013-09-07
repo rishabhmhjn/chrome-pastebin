@@ -1,19 +1,18 @@
 /* Will be compiled down to a single stylesheet with your sass files */
 
 html {
-    /* Defaults css for cssmin process */
+  /* Defaults css for cssmin process */
 }
 
 body {
-  width: 500px;
+  width: 600px;
   height: auto;
-  padding: 10px;
   margin: 10px;
 }
 
 .CodeMirror {
   border: 1px solid #eee;
-  /*height: 200px;*/
+  height: 200px;
 }
 
 .CodeMirror-scroll {
@@ -21,10 +20,34 @@ body {
   overflow-x: auto;
 }
 
-.chrome-container .row {
-  margin-top: 10px;
+.chrome-container {
+  /*padding: 10px;*/
 }
 
-.chrome-container .row:first-child {
-  margin-top: 0px;
+.chrome-container .row {
+  margin-bottom: 10px;
 }
+
+.chrome-container fieldset.form-group .control-label {
+  padding-top: 2px
+}
+
+.chrome-container fieldset.form-group .form-control {
+  height: 24px
+}
+
+.chrome-container fieldset.form-group label {
+  font-weight: normal;
+  font-size: 0.9em;
+}
+
+.chrome-container fieldset.form-group select {
+  font-size: 0.9em;
+}
+
+.chrome-container legend {
+  font-size: 1em;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
