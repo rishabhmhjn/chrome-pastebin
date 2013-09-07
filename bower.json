@@ -1,0 +1,12 @@
+{
+  "name": "chrome-pastebin",
+  "version": "0.0.0",
+  "dependencies": {
+    "bootstrap": "~3.0.0",
+    "jquery": "~2.0.3",
+    "angular": "~1.0.8",
+    "angular-ui-codemirror": "~0.0.4",
+    "CodeMirror": "~3.16.0"
+  },
+  "devDependencies": {}
+}

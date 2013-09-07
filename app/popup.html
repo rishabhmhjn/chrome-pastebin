@@ -1,0 +1,43 @@
+<!doctype html>
+<html ng-app="CpbApp"  ng-csp="">
+<head>
+  <!-- build:css styles/styles.min.css -->
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+  <link href="bower_components/codemirror/lib/codemirror.css"  type="text/css" rel="stylesheet">
+  <link href="styles/main.css" rel="stylesheet">
+  <!-- endbuild -->
+
+  <!-- build:js scripts/scripts.min.js -->
+  <script src="bower_components/jquery/jquery.js"></script>
+  <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="bower_components/codemirror/lib/codemirror.js"></script>
+
+  <script type="text/javascript" src="bower_components/angular-ui-codemirror/ui-codemirror.js"></script>
+
+  <script src="scripts/config.js"></script>
+  <script src="scripts/popup.js"></script>
+  <!-- endbuild -->
+
+</head>
+<body>
+
+  <section ng-controller="SubmitPasteCtrl" class="chrome-container">
+
+    <div class="row">
+      <textarea  ui-codemirror="cmOption" ng-model="cmModel" ng-model="pasteText" ></textarea>
+      <p class="text-muted">
+        <small> <em>To highlight particular lines, prefix each line with <strong>@h@</strong></em> 
+        </small>
+      </p>
+    </div>
+
+    <div class="row" >
+      <select  class="form-control" ng-model="pasteExpireDate" ng-options="c.value as c.name for c in pasteExpireDateConfig" ng-change="onModeChanged()"></select>
+    </div>
+    <div class="row pull-right">
+      <button type="button" class="btn btn-primary btn-sm">submit</button>
+    </div>
+  </section>
+
+</body>
+</html>
