@@ -1,6 +1,9 @@
-chrome-pastebin [![unstable](http://hughsk.github.io/stability-badges/dist/unstable.svg)](http://github.com/hughsk/stability-badges)
+chrome-pastebin [![experimental](http://hughsk.github.io/stability-badges/dist/experimental.svg)](http://github.com/hughsk/stability-badges)
 ====================
-Available on Chrome Web Store - TODO-URL
+Available on Chrome Web Store - http://goo.gl/1DziJX
+
+
+![Quick Pastebin](http://i.imgur.com/euSMWlJ.png)
 
 Techs
 -----
@@ -12,7 +15,8 @@ Techs
 - [AngularJS](http://angularjs.org/)
  - [ui-codemirror](https://github.com/angular-ui/ui-codemirror)
 
-![Alt text](https://raw.github.com/yeoman/yeoman.io/gh-pages/media/toolset.png)
+
+![Yeoman](https://raw.github.com/yeoman/yeoman.io/gh-pages/media/toolset.png)
 
 
 TODO
