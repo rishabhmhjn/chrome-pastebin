@@ -333,7 +333,7 @@ PasteBin.config.syntaxOptions = [{
     "value": "freebasic"
 }, {
     "name": "freeSWitcH",
-    "Value": "freeswitch"
+    "value": "freeswitch"
 }, {
     "name": "GAMBAS",
     "value": "gambas"
@@ -558,7 +558,7 @@ PasteBin.config.syntaxOptions = [{
     "value": "plsql"
 }, {
     "name": "postgResql",
-    "Value": "postgresql"
+    "value": "postgresql"
 }, {
     "name": "POV-RAy",
     "value": "povray"
@@ -705,13 +705,13 @@ PasteBin.config.syntaxOptions = [{
     "value": "vim"
 }, {
     "name": "visual Pro log",
-    "Value": "visualprolog"
+    "value": "visualprolog"
 }, {
     "name": "visUalbasic",
     "value": "vb"
 }, {
     "name": "visualFOxpro",
-    "Value": "visualfoxpro"
+    "value": "visualfoxpro"
 }, {
     "name": "whiteSpace",
     "value": "whitespace"
@@ -780,8 +780,3 @@ PasteBin.config.pastePrivate = [{
 PasteBin.config.apiKey = "2e58ce27239e34a77c5ef65dbea8b24d";
 PasteBin.config.apiPostUrl = "http://pastebin.com/api/api_post.php";
 PasteBin.config.apiLoginUrl = "http://pastebin.com/api/api_login.php";
-
-
-
-
-
