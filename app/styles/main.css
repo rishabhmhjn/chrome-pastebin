@@ -45,9 +45,7 @@ body {
   font-size: 0.9em;
 }
 
-.chrome-container legend {
-  font-size: 1em;
-  margin-bottom: 10px;
+.chrome-container .options-panel-title {
   cursor: pointer;
 }
 

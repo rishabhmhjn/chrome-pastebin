@@ -2,19 +2,20 @@
 <html ng-app="CpbApp"  ng-csp="">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- build:css styles/styles.min.css -->
+  <!-- build:css styles/popup.min.css -->
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
   <link href="bower_components/codemirror/lib/codemirror.css"  type="text/css" rel="stylesheet">
   <link href="styles/main.css" rel="stylesheet">
   <!-- endbuild -->
 
-  <!-- build:js scripts/scripts.min.js -->
+  <!-- build:js scripts/popup.min.js -->
   <script src="bower_components/jquery/jquery.js"></script>
   <script type="text/javascript" src="bower_components/angular/angular.js"></script>
   <script type="text/javascript" src="bower_components/codemirror/lib/codemirror.js"></script>
 
   <script type="text/javascript" src="bower_components/angular-ui-codemirror/ui-codemirror.js"></script>
 
+  <script src="scripts/xml2json.js"></script>
   <script src="scripts/config.js"></script>
   <script src="scripts/popup.js"></script>
   <!-- endbuild -->
@@ -26,6 +27,20 @@
       <form class="form-horizontal" role="form">
 
         <div class="form-group">
+          <div class="pull-left"><strong>Chrome Pastebin</strong></div>
+          <div class="pull-right">
+            <small>
+              <a href="/options.html" ng-show="currentUser == null" target="_blank">Login</a>
+              <span ng-hide="currentUser == null">Post as <strong  class="text-info">{{currentUser.user_name}}</strong></span>
+            </small>
+            &nbsp;|&nbsp;
+            <small>
+              <a href="/options.html" target="_blank">Options</a>
+            </small>
+
+          </div>
+        </div>
+        <div class="form-group">
           <textarea rows="20" ui-codemirror="cmOption" ng-model="paste.api_paste_code" ></textarea>
           <p class="text-muted">
             <small> <em>To highlight particular lines, prefix each line with <strong>@h@</strong></em> 
@@ -33,21 +48,23 @@
           </p>
         </div>
 
-        <fieldset class="form-group">
-          <legend ng-click="showOptions = !showOptions">
-            <span ng-show="showOptions">▼</span>
-            <span ng-hide="showOptions">▶</span> <strong>Options</strong>
-          </legend>
-          <div ng-show="showOptions" style="padding: 10px;">
+        <div class="panel panel-default form-group">
+          <div class="panel-heading">
+            <h3 class="panel-title options-panel-title" ng-click="showOptions = !showOptions">
+              <span ng-show="showOptions">▼</span>
+              <span ng-hide="showOptions">▶</span> <strong>Options</strong>
+            </h3>
+          </div>
+          <div class="panel-body" ng-show="showOptions">
             <div  class="row">
               <div class="form-group col-xs-6">
-                <label for="pasteExpirePeriod" class="col-xs-5 control-label">Paste Expiry:</label>
+                <label for="pasteExpirePeriod" class="col-xs-5 control-label">Expiry:</label>
                 <div class="col-xs-7">
                   <select class="form-control" id="pasteExpirePeriod" ng-model="paste.api_paste_expire_date" ng-options="c.value as c.name for c in pasteExpirePeriodConfig"></select>
                 </div>
               </div>
               <div class="form-group col-xs-6 pull-right">
-                <label for="pastePrivate" class="col-xs-5 control-label">Paste Privacy:</label>
+                <label for="pastePrivate" class="col-xs-5 control-label">Privacy:</label>
                 <div class="col-xs-7">
                   <select class="form-control" id="pastePrivate" ng-model="paste.api_paste_private" ng-options="c.value as c.name for c in pastePrivateConfig"></select>
                 </div>
@@ -55,7 +72,7 @@
             </div>
             <div  class="row">
               <div class="form-group col-xs-6">
-                <label for="pasteSyntax" class="col-xs-5 control-label">Paste Syntax:</label>
+                <label for="pasteSyntax" class="col-xs-5 control-label">Syntax:</label>
                 <div class="col-xs-7">
                   <select ng-change="onModeChanged()" class="form-control" id="pasteSyntax" ng-model="paste.api_paste_format" ng-options="c.value as c.name for c in pasteSyntaxConfig" 
         options-disabled="p.disabled for p in pasteSyntaxConfig"></select>
@@ -67,14 +84,13 @@
                   <input type="text" ng-model="paste.api_paste_name" class="form-control" id="pasteName" placeholder="Title (optional)"></div>
               </div>
             </div>
-
           </div>
-        </fieldset>
+        </div>
+
         <div class="form-group ">
-          <button type="button" class="btn btn-primary btn-sm col-xs-2" ng-click="submitPaste()">Submit</button>
-            <div class="col-xs-7">
-              <input type="url" class="form-control"  ng-model="pasteResultUrl" id="pasteResultUrl" ng-show="!inProgress && pasteResultUrl!=''" placeholder="" readonly>
-            </div>
+          <button type="button" class="btn btn-default btn-sm col-xs-2" ng-click="submitPaste()">Submit</button>
+          <div class="col-xs-7">
+            <input type="url" class="form-control"  ng-model="pasteResultUrl" id="pasteResultUrl" ng-show="!inProgress && pasteResultUrl!=''" placeholder="" readonly></div>
         </div>
       </form>
     </section>

@@ -66,7 +66,8 @@ module.exports = function (grunt) {
                     src: [
                         '.tmp',
                         '<%= yeoman.dist %>/*',
-                        '!<%= yeoman.dist %>/.git*'
+                        '!<%= yeoman.dist %>/.git*',
+                        'package/*'
                     ]
                 }]
             },
@@ -252,7 +253,10 @@ module.exports = function (grunt) {
             dist: {
                 options: {
                     buildnumber: true,
-                    background: 'scripts/background.js'
+                    background:  {
+                        target : 'scripts/background.js',
+                        exclude : []
+                    }
                 },
                 src: '<%= yeoman.app %>',
                 dest: '<%= yeoman.dist %>'

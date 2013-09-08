@@ -1,4 +1,4 @@
-chrome-pastebin
+chrome-pastebin [![unstable](http://hughsk.github.io/stability-badges/dist/unstable.svg)](http://github.com/hughsk/stability-badges)
 ====================
 Available on Chrome Web Store - TODO-URL
 

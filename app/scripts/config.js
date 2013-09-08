@@ -2,78 +2,76 @@ var PasteBin = PasteBin || {
     config: {}
 };
 
-
-
-PasteBin.config.availableSyntax = {
-    "apl": true,
-    "asterisk": true,
-    "clike": true,
-    "clojure": true,
-    "cobol": true,
-    "coffeescript": true,
-    "commonlisp": true,
-    "css": true,
-    "d": true,
-    "diff": true,
-    "ecl": true,
-    "erlang": true,
-    "gas": true,
-    "gfm": true,
-    "go": true,
-    "groovy": true,
-    "haml": true,
-    "haskell": true,
-    "haxe": true,
-    "htmlembedded": true,
-    "htmlmixed": true,
-    "http": true,
-    "jade": true,
-    "javascript": true,
-    "jinja2": true,
-    "less": true,
-    "livescript": true,
-    "lua": true,
-    "markdown": true,
-    "meta.js": true,
-    "mirc": true,
-    "nginx": true,
-    "ntriples": true,
-    "ocaml": true,
-    "pascal": true,
-    "perl": true,
-    "php": true,
-    "pig": true,
-    "properties": true,
-    "python": true,
-    "q": true,
-    "r": true,
-    "rpm": true,
-    "rst": true,
-    "ruby": true,
-    "rust": true,
-    "sass": true,
-    "scheme": true,
-    "shell": true,
-    "sieve": true,
-    "smalltalk": true,
-    "smarty": true,
-    "smartymixed": true,
-    "sparql": true,
-    "sql": true,
-    "stex": true,
-    "tcl": true,
-    "tiddlywiki": true,
-    "tiki": true,
-    "turtle": true,
-    "vb": true,
-    "vbscript": true,
-    "velocity": true,
-    "verilog": true,
-    "xml": true,
-    "xquery": true,
-    "yaml": true,
-    "z80": true
-};
+// PasteBin.config.availableSyntax = {
+//     "apl": true,
+//     "asterisk": true,
+//     "clike": true,
+//     "clojure": true,
+//     "cobol": true,
+//     "coffeescript": true,
+//     "commonlisp": true,
+//     "css": true,
+//     "d": true,
+//     "diff": true,
+//     "ecl": true,
+//     "erlang": true,
+//     "gas": true,
+//     "gfm": true,
+//     "go": true,
+//     "groovy": true,
+//     "haml": true,
+//     "haskell": true,
+//     "haxe": true,
+//     "htmlembedded": true,
+//     "htmlmixed": true,
+//     "http": true,
+//     "jade": true,
+//     "javascript": true,
+//     "jinja2": true,
+//     "less": true,
+//     "livescript": true,
+//     "lua": true,
+//     "markdown": true,
+//     "meta.js": true,
+//     "mirc": true,
+//     "nginx": true,
+//     "ntriples": true,
+//     "ocaml": true,
+//     "pascal": true,
+//     "perl": true,
+//     "php": true,
+//     "pig": true,
+//     "properties": true,
+//     "python": true,
+//     "q": true,
+//     "r": true,
+//     "rpm": true,
+//     "rst": true,
+//     "ruby": true,
+//     "rust": true,
+//     "sass": true,
+//     "scheme": true,
+//     "shell": true,
+//     "sieve": true,
+//     "smalltalk": true,
+//     "smarty": true,
+//     "smartymixed": true,
+//     "sparql": true,
+//     "sql": true,
+//     "stex": true,
+//     "tcl": true,
+//     "tiddlywiki": true,
+//     "tiki": true,
+//     "turtle": true,
+//     "vb": true,
+//     "vbscript": true,
+//     "velocity": true,
+//     "verilog": true,
+//     "xml": true,
+//     "xquery": true,
+//     "yaml": true,
+//     "z80": true
+// };
 
 
 
@@ -115,7 +113,7 @@ PasteBin.config.syntaxOptions = [{
     "value": "php"
 }, {
     "name": "Plain Text",
-    "value": ""
+    "value": "text"
 }, {
     "name": "PYthon",
     "value": "python"
@@ -484,9 +482,6 @@ PasteBin.config.syntaxOptions = [{
     "name": "newliSP",
     "value": "newlisp"
 }, {
-    "name": "none",
-    "value": "text"
-}, {
     "name": "nulLsoft installer",
     "value": "nsis"
 }, {
@@ -783,7 +778,8 @@ PasteBin.config.pastePrivate = [{
 
 
 PasteBin.config.apiKey = "2e58ce27239e34a77c5ef65dbea8b24d";
-PasteBin.config.newPasteUrl = "http://pastebin.com/api/api_post.php";
+PasteBin.config.apiPostUrl = "http://pastebin.com/api/api_post.php";
+PasteBin.config.apiLoginUrl = "http://pastebin.com/api/api_login.php";
 
 
 
